@@ -30,7 +30,7 @@ After a session is created, any user can view the details of the session. These 
 
 ## Technical Specifications
 
-Using [supabase](https://supabase.io) for the database. The pomodoro timer is implementing using [xstate](https://xstate.js.org/).
+Using [supabase](https://supabase.io) for the database. The pomodoro timer is implemented using [xstate](https://xstate.js.org/).
 
 ### Dependencies
 
@@ -48,8 +48,8 @@ State charts are used to describe the timer functionality.
 
 ![image](https://user-images.githubusercontent.com/14803/142367637-29abc862-3ce3-4fa3-adf0-2d562e98be10.png)
 
-In this example we can see that there are two main states `active` and `break`. Within those states are `running` and `paused` child states. These allow us to manage the timer. The current implementation will continue to transition between working and break session indefinitely.
+In this example we can see that there are two main states `active` and `break`. Within those states are `running` and `paused` child states. These allow us to manage the timer. The current implementation will continue to transition between working and break sessions indefinitely.
 
 ### Incomplete
 
-- Would like to users to be able to join existing sessions
+- Would like users to be able to join existing sessions
