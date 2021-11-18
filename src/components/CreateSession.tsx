@@ -29,7 +29,7 @@ const CreateSession = () => {
         />
 
         <button
-          disabled={title.length < 3 || creating}
+          disabled={title.length < 3 || title.length > 64 || creating}
           className="rounded-full shadow-md py-2 px-4 bg-white text-red-400 font-bold border-2 border-red-400 disabled:opacity-50 hover:border-red-500 hover:text-red-500 "
           onClick={onCreate}
         >
