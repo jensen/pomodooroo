@@ -13,3 +13,16 @@ body,
   font-variant-numeric: tabular-nums;
   user-select: none;
 }
+
+@keyframes progress-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loading {
+  animation: progress-animation 1000ms ease 400ms infinite;
+}

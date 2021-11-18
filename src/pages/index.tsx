@@ -11,8 +11,8 @@ const Index = () => {
       >
         pomodooroo.
       </header>
-      <section className="px-4 py-4 flex-grow bg-gray-100 flex flex-col justify-center items-center">
-        <div className="m-auto">
+      <section className="px-4 py-4 flex-grow bg-gray-100 flex flex-col">
+        <div className="mx-auto">
           <Outlet />
         </div>
       </section>

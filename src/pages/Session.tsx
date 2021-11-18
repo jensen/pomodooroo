@@ -9,24 +9,12 @@ const Session = () => {
   if (!id) throw new Error("Must select session");
 
   return (
-    <Routes>
-      <Route
-        path=""
-        element={
-          <LoadingBoundary>
-            <ActiveSession id={id} />
-          </LoadingBoundary>
-        }
-      />
-      <Route
-        path="details"
-        element={
-          <LoadingBoundary>
-            <CompleteSession id={id} />
-          </LoadingBoundary>
-        }
-      />
-    </Routes>
+    <LoadingBoundary>
+      <Routes>
+        <Route path="" element={<ActiveSession id={id} />} />
+        <Route path="details" element={<CompleteSession id={id} />} />
+      </Routes>
+    </LoadingBoundary>
   );
 };
 

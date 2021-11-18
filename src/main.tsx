@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { QueryClient, QueryClientProvider } from "react-query";
+import { fetchSessions } from "services/sessions";
 
 import Router from "./Router";
 
@@ -19,6 +20,8 @@ const queryClient = new QueryClient({
     },
   },
 });
+
+queryClient.prefetchQuery("sessions", fetchSessions as any);
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
