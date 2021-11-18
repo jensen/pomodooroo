@@ -18,9 +18,11 @@ The user can view all the existing sessions in a list and choose to create one t
 
 <img src="https://user-images.githubusercontent.com/14803/142367795-d98f8080-8c66-4dc5-89c2-48c2d71b1533.png" width="512" alt="Session List" />
 
-There are a few other features, including some feedback for the cycle the user is on. The fourth break will be 10 minutes instead of 5.
+There are a few other features, including some feedback for the cycle the user is on. The image shows that we are in the break period of the third cycle.
 
-<img src="https://user-images.githubusercontent.com/14803/142368064-184d89e4-9779-4bc2-8d8e-85939ffdc057.png" width="512" alt="Timer View" />
+<img src="https://user-images.githubusercontent.com/14803/142382913-50820ed3-0088-46ed-a5d7-babf03ae59da.png" width="512" alt="Timer View" />
+
+The fourth break will be 10 minutes instead of 5.
 
 After a session is created, any user can view the details of the session. These details describe the length of the session, and the number of pauses used.
 
