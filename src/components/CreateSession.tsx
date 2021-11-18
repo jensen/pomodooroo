@@ -30,10 +30,10 @@ const CreateSession = () => {
 
         <button
           disabled={title.length < 3 || title.length > 64 || creating}
-          className="rounded-full shadow-md py-2 px-4 bg-white text-red-400 font-bold border-2 border-red-400 disabled:opacity-50 hover:border-red-500 hover:text-red-500 "
+          className="rounded-full shadow-md py-2 px-4 w-24 bg-white text-red-400 font-bold border-2 border-red-400 disabled:opacity-50 hover:border-red-500 hover:text-red-500 "
           onClick={onCreate}
         >
-          Create Session
+          go.
         </button>
       </div>
       <span className="text-xs text-gray-400 pl-2">minimum 3 characters</span>
