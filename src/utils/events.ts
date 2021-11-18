@@ -1,4 +1,4 @@
-import { SyntheticEvent } from "react";
+import { SyntheticEvent, BaseSyntheticEvent } from "react";
 
 export const withStopPropagation =
   <T extends SyntheticEvent>(fn?: (event: T) => void) =>
@@ -21,9 +21,11 @@ export const withPreventDefault =
   };
 
 export const withTargetValue =
-  <T extends unknown>(fn?: (value: T) => void) =>
-  (event: SyntheticEvent<HTMLInputElement>) => {
+  <T extends string>(fn: (value: T) => void) =>
+  (event: React.ChangeEvent<HTMLInputElement>) => {
+    const target = event.target as HTMLInputElement;
+
     if (fn) {
-      fn(event.target.value);
+      fn(target.value as T);
     }
   };

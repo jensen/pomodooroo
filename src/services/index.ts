@@ -8,11 +8,11 @@ export type {
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-if (!supabaseUrl) {
+if (typeof supabaseUrl !== "string") {
   throw new Error("Most provide VITE_SUPABASE_URL");
 }
 
-if (!supabaseAnonKey) {
+if (typeof supabaseAnonKey !== "string") {
   throw new Error("Most provide VITE_SUPABASE_ANON_KEY");
 }
 

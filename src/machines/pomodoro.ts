@@ -128,8 +128,6 @@ const pomodoroMachine = createMachine<Context>(
   },
   {
     guards: {
-      isActive: (context, event) => context.defaultState === "active",
-      isBreak: (context, event) => context.defaultState === "break",
       isResumable: (context, event) => context.startedTime !== 0,
       inProgress: (context, event) =>
         context.currentTime - context.startedTime < context.duration,

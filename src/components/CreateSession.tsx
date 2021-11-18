@@ -14,7 +14,7 @@ const CreateSession = () => {
       <div className="flex justify-between space-x-4">
         <input
           value={title}
-          onChange={withTargetValue(setTitle)}
+          onChange={withTargetValue<string>(setTitle)}
           placeholder="Title"
           className="flex-1 rounded-full shadow-md py-2 px-4 text-red-500 font-bold border-2 border-red-400 focus:ring-none hover:border-red-500 focus:outline-none focus:border-red-500"
         />

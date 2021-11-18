@@ -1,12 +1,19 @@
 import classnames from "classnames";
+import React, { ButtonHTMLAttributes } from "react";
 import useTimer from "../hooks/useTimer";
 
-interface IControlButton {}
+interface IControlButton {
+  disabled?: boolean;
+  onClick: any;
+  children: React.ReactNode;
+}
 
-const ControlButton = (props) => {
+const ControlButton = (props: IControlButton) => {
   return (
     <button
-      className="rounded-full px-8 py-2 bg-red-400 text-white disabled:opacity-50"
+      className={classnames(
+        "rounded-full px-8 py-2 bg-red-400 text-white disabled:opacity-50"
+      )}
       {...props}
     >
       {props.children}
@@ -14,7 +21,11 @@ const ControlButton = (props) => {
   );
 };
 
-interface IControlPanelProps {}
+interface IControlPanelProps {
+  toggle: () => void;
+  reset: () => void;
+  matches: (match: string) => boolean;
+}
 
 const ControlPanel = ({ toggle, matches, reset }: IControlPanelProps) => {
   return (
