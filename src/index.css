@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.timer {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
